@@ -10,7 +10,7 @@ use App\PriceGroup;
 class WebSiteController extends Controller
 {
   public function getProducts() {
-    $products = Product::with('priceGroups')->get();
+    $products = Product::get();
     return view('site.products')->with('products', $products);
   }
 }
