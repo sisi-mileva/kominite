@@ -10,6 +10,9 @@
         {{Form::hidden('id', $priceGroup->id, [])}}
         {{Form::hidden('product_id', $priceGroup->product_id)}}
         <div class="form-group">
+            {{Form::text('title', $priceGroup->title, ['placeholder' => 'Име','class' => 'form-control'])}}
+        </div>
+        <div class="form-group">
             <label>Снимка1:</label>
             <div>
                 <img src="../../storage/products/{{$priceGroup->image1}}" width="260" alt="product image"/>
@@ -25,7 +28,7 @@
         </div>
         <div class="form-group">
             <label>Ценова таблица:</label>
-            {{Form::textarea('price_table', $priceGroup->price_table,['class' => 'form-control', 'row' => '2', 'placeholder' => 'Кратко описание'])}}
+            {{Form::textarea('price_table', $priceGroup->price_table, ['class' => 'form-control', 'row' => '2', 'placeholder' => 'Кратко описание'])}}
         </div>
         {{Form::submit('Запази', ['class' => 'btn btn-success'])}}
         {!! Form::close() !!}

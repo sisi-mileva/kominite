@@ -43,6 +43,7 @@ class PriceGroupController extends Controller
     // Create price group
     $priceGroup = new PriceGroup;
     $priceGroup->product_id = $request->input('product_id');
+    $priceGroup->title = ! empty($request->input('title')) ? $request->input('title') : '';
     $priceGroup->price_table = $request->input('price_table');
     $priceGroup->image1 = $filenameToStore1;
     $priceGroup->image2 = $filenameToStore2;
@@ -118,6 +119,7 @@ class PriceGroupController extends Controller
 
     $priceGroup->product_id = $request->input('product_id');
     $priceGroup->price_table = $request->input('price_table');
+    $priceGroup->title = ! empty($request->input('title')) ? $request->input('title') : '';
     $priceGroup->image1 = $filenameToStore1;
     $priceGroup->image2 = $filenameToStore2;
 

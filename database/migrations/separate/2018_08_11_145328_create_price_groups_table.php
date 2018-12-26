@@ -16,6 +16,7 @@ class CreatePriceGroupsTable extends Migration
         Schema::create('price_groups', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('product_id');
+            $table->string('title');
             $table->string('image1');
             $table->string('image2');
             $table->text('price_table');

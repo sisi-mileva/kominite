@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'WebSiteController@getProducts');
+Route::get('/product-group/{id}', 'WebSiteController@getProductGroup');
+Route::get('/gallery', 'GalleryController@index');
+Route::get('/gallery/{id}', 'GalleryController@show');
 
 Route::get('/admin', 'AdminPanelController@index');
 Route::get('/admin/cms', 'AdminPanelController@successLogin');

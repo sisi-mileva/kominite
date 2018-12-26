@@ -2,4 +2,52 @@
   width: 1500px;
   margin: 0 auto;
   padding-top: 107px;
+
+  @media only screen and (max-width: 1500px) {
+    width: 100%;
+  }
+}
+
+.border-right {
+  border-right: 1px solid black;
+}
+
+.border-b-right {
+  border-right: 2px solid black !important;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-purple {
+  background-color: $purple;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-light-green {
+  background-color: $light-green;
+}
+
+.bg-cream {
+  background-color: $cream;
+}
+
+.bg-light-cream {
+  background-color: $light-cream;
+}
+
+.bg-gray {
+  background-color: $gray;
+}
+
+.bg-light-gray {
+  background-color: $light-gray;
+}
+
+.bg-red {
+  background-color: $brick;
 }

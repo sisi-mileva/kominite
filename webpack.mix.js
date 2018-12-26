@@ -11,6 +11,13 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css')
+mix.scripts(['node_modules/slick-carousel/slick/slick.min.js'], 'public/js/libs.js')
+  .scripts(['resources/assets/js/slider.js'], 'public/js/all.js')
+  .styles([
+    'node_modules/slick-carousel/slick/slick.css'
+  ], 'public/css/libs.css')
+  .sass('resources/assets/sass/app.scss', 'public/css')
+  .options({
+    processCssUrls: false
+  })
   .sass('resources/assets/sass/admin.scss', 'public/css');

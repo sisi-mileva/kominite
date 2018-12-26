@@ -19,7 +19,7 @@
     @if (trim($__env->yieldContent('keywords')))
         <meta name="keywords" content="@yield('keywords')">
     @endif
-    {{--<link rel="stylesheet" href="./dist/css/minifiedLibrariesCss.min.css?v=4" type="text/css"/>--}}
+    <link rel="stylesheet" href="{{asset('css/libs.css')}}" type="text/css"/>
     <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css"/>
 </head>
 <body>
@@ -29,8 +29,9 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-{{--<script type="text/javascript" src="./dist/js/libs.js?v=4" defer></script>
-<script type="text/javascript" src="./dist/js/app.js?v=4" defer></script>--}}
+        crossorigin="anonymous"
+></script>
+<script type="text/javascript" src="{{asset('js/libs.js')}}" defer></script>
+<script type="text/javascript" src="{{asset('js/all.js')}}" defer></script>
 </body>
 </html>

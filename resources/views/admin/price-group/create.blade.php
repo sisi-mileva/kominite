@@ -9,6 +9,9 @@
         {!!Form::open(['action' => 'PriceGroupController@store','method' => 'POST', 'enctype' => 'multipart/form-data'])!!}
         {{Form::hidden('product_id', $productId)}}
         <div class="form-group">
+            {{Form::text('title','',['placeholder' => 'Име','class' => 'form-control'])}}
+        </div>
+        <div class="form-group">
             <label>Снимка1:</label>
             {{Form::file('image1')}}
         </div>

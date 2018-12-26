@@ -1,0 +1,26 @@
+.album-cart {
+  width: 25%;
+  float: left;
+  padding: 10px;
+  text-align: center;
+
+  img {
+    height: 270px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    &:hover {
+      border-color: #1d6298;
+    }
+  }
+}
+
+.album-link {
+  display: block;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.album-title {
+  font-size: 16px;
+}

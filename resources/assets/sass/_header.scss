@@ -3,6 +3,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 10;
   background-color: white;
   border-bottom: 20px solid #004e8a;
   -webkit-box-shadow: 0 3px 4px -3px rgba(0, 0, 0, 0.3);
@@ -61,24 +62,22 @@ header {
 
 @media only screen and (max-width: 1200px) {
   .header {
-    padding: 20px 50px;
+    padding: 10px 50px 0;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .header {
-    padding: 20px;
+    padding: 10px 10px 0;
   }
 }
 
 @media only screen and (max-width: 580px) {
   .header {
-    padding: 10px;
     text-align: center;
 
     h1 {
       float: none;
-      padding-bottom: 10px;
     }
 
     nav {

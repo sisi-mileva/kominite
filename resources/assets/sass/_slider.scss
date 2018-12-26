@@ -1,0 +1,136 @@
+.products-slider {
+  position: absolute;
+  left: 20px;
+  width: 360px;
+  height: 710px;
+  float: left;
+  padding: 20px;
+
+  .slick-next,
+  .slick-prev {
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    display: block;
+    width: 360px;
+    height: 22px;
+    line-height: 0;
+    padding: 0;
+    color: transparent;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    transform: translateX(-50%);
+  }
+
+  .slick-prev {
+    top: -20px;
+  }
+
+  .slick-next {
+    bottom: -20px;
+  }
+
+  .slick-next:before,
+  .slick-prev:before {
+    content: "";
+    display: block;
+    width: 360px;
+    height: 22px;
+    line-height: 1;
+    color: #fff;
+    opacity: .75;
+    font-size: 2.2rem;
+    background-position: 50% 0;
+    background-size: 80px 20px;
+    background-repeat: no-repeat;
+  }
+
+  .slick-prev:before {
+    background-image: url('../images/arrow_up.png');
+  }
+
+  .slick-next:before {
+    background-image: url('../images/arrow_down.png');
+  }
+
+  @media only screen and (max-width: 1350px) {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 265px;
+    float: none;
+    margin: 50px 0;
+    padding: 20px 40px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -25px;
+      left: 20px;
+      width: calc(100% - 40px);
+      height: 4px;
+      background-color: #e5e5e5;
+    }
+
+    .slick-next,
+    .slick-prev,
+    .slick-next:before,
+    .slick-prev:before {
+      width: 22px;
+      height: 265px;
+    }
+
+    .slick-prev {
+      top: 0;
+      left: 20px;
+    }
+
+    .slick-next {
+      bottom: 0;
+      right: 0;
+      left: auto;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      background-position: 0 50%;
+      background-size: 20px 80px;
+    }
+
+    .slick-prev:before {
+      background-image: url('../images/arrow_left.png');
+    }
+
+    .slick-next:before {
+      background-image: url('../images/arrow_right.png');
+    }
+  }
+}
+
+.slick-vertical .slick-slide {
+  height: 225px;
+  text-align: center;
+}
+
+.slick-slide {
+  overflow: hidden;
+  padding-bottom: 5px;
+
+  a {
+    display: inline-block;
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+  }
+
+  @media only screen and (max-width: 1350px) {
+    height: 225px;
+    padding: 0 10px;
+    text-align: center;
+  }
+}
