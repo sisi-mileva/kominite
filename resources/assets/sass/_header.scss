@@ -4,21 +4,73 @@ header {
   right: 0;
   left: 0;
   z-index: 10;
-  background-color: white;
-  border-bottom: 20px solid #004e8a;
+  height: 86px;
+  background: -moz-linear-gradient(73deg, rgba(0,78,138,1) 0%, rgba(255,255,255,1) 25%, rgba(5,193,255,1) 50%, rgba(255,255,255,1) 75%, rgba(0,78,138,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,78,138,1)), color-stop(25%, rgba(255,255,255,1)), color-stop(50%, rgba(5,193,255,1)), color-stop(75%, rgba(255,255,255,1)), color-stop(100%, rgba(0,78,138,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(73deg, rgba(0,78,138,1) 0%, rgba(255,255,255,1) 25%, rgba(5,193,255,1) 50%, rgba(255,255,255,1) 75%, rgba(0,78,138,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(73deg, rgba(0,78,138,1) 0%, rgba(255,255,255,1) 25%, rgba(5,193,255,1) 50%, rgba(255,255,255,1) 75%, rgba(0,78,138,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(73deg, rgba(0,78,138,1) 0%, rgba(255,255,255,1) 25%, rgba(5,193,255,1) 50%, rgba(255,255,255,1) 75%, rgba(0,78,138,1) 100%); /* ie10+ */
+  background: linear-gradient(17deg, rgba(0,78,138,1) 0%, rgba(255,255,255,1) 25%, rgba(5,193,255,1) 50%, rgba(255,255,255,1) 75%, rgba(0,78,138,1) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004e8a', endColorstr='#004e8a',GradientType=0 ); /* ie6-9 */
+  border-bottom: 10px solid #004e8a;
   -webkit-box-shadow: 0 3px 4px -3px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 4px -3px rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width: 1200px) {
+    border-bottom: 6px solid #004e8a;
+  }
 }
 
 .header {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
   width: 1500px;
   margin: 0 auto;
-  padding: 10px 165px 0;
+  padding: 20px 165px 0;
   color: #003258;
-  background-color: white;
+
+  .menu-wrapper {
+    display: inline-block;
+  }
+
+  .logo-wrapper {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    overflow: hidden;
+
+    .logo-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      width: 300px;
+      height: 50px;
+    }
+
+    .logo-flame {
+      position: absolute;
+      top: 0;
+      left: 38px;
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      overflow: hidden;
+
+      &.flame-animation {
+        transform: rotate(0deg);
+        animation: flame 0.7s linear infinite;
+      }
+    }
+  }
 
   nav {
     line-height: 27px;
+    margin-left: auto;
     font-size: 1.6rem;
     text-transform: uppercase;
 
@@ -29,13 +81,54 @@ header {
     li {
       display: inline-block;
       float: left;
-      width: 20%;
-      padding: 0 20px;
+      padding: 0 40px;
       text-align: center;
       cursor: pointer;
 
       a {
+        font-weight: bold;
         text-decoration: none;
+      }
+
+      @media only screen and (max-width: 1300px) {
+        padding: 0 20px;
+      }
+
+      @media only screen and (max-width: 900px) {
+        padding: 0 10px;
+      }
+    }
+
+    @media only screen and (max-width: 580px) {
+      position: absolute;
+      top: 76px;
+      right: 0;
+      width: 200px;
+      max-height: 0;
+      overflow: hidden;
+
+      &.active {
+        max-height: 300px;
+        -webkit-transition: max-height 0.8s;
+        transition: max-height 0.8s;
+      }
+
+      ul {
+        width: 180px;
+        margin: 0 auto 8px;
+        background-color: white;
+        border-top: 1px solid #d2d2d2;
+        box-shadow: 0 5px 5px 0 #d2d2d2;
+      }
+
+      li {
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid #d2d2d2;
+
+        a {
+          width: 100%;
+        }
       }
     }
   }
@@ -50,7 +143,16 @@ header {
   }
 
   img {
-    height: 50px;
+    height: 40px;
+  }
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+
+  @media only screen and (max-width: 580px) {
+    display: block;
   }
 }
 
@@ -62,13 +164,51 @@ header {
 
 @media only screen and (max-width: 1200px) {
   .header {
-    padding: 10px 50px 0;
+    padding: 20px 50px 0;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 820px) {
   .header {
-    padding: 10px 10px 0;
+    padding: 20px 10px 0;
+  }
+}
+
+@media only screen and (max-width: 745px) {
+  header {
+    height: 76px;
+  }
+
+  .header {
+    .logo-wrapper {
+      width: 220px;
+      height: 33px;
+
+      .logo-text {
+        width: 200px;
+        height: 33px;
+      }
+
+      .logo-flame {
+        left: 24px;
+        width: 33px;
+        height: 33px;
+      }
+    }
+
+    nav {
+      line-height: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .header nav {
+    font-size: 1.4rem;
+
+    li {
+      padding: 0 5px;
+    }
   }
 }
 
@@ -76,8 +216,8 @@ header {
   .header {
     text-align: center;
 
-    h1 {
-      float: none;
+    .menu-wrapper {
+      width: 100%;
     }
 
     nav {
@@ -96,5 +236,14 @@ header {
 @media only screen and (max-width: 350px) {
   .header nav li {
     padding: 0 6px;
+  }
+}
+
+@keyframes flame {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

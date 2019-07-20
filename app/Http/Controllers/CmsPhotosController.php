@@ -15,7 +15,6 @@ class CmsPhotosController extends Controller
 
   public function store(Request $request){
     $this->validate($request, [
-      'title' => 'required',
       'photo' => 'image|max:1999'
     ]);
 
@@ -43,7 +42,7 @@ class CmsPhotosController extends Controller
     // Upload Photo
     $photo = new Photo;
     $photo->album_id = $request->input('album_id');
-    $photo->title = $request->input('title');
+    $photo->title = ! empty($request->input('title')) ? $request->input('title') : '';
     $photo->photo = $filenameToStore;
 
     $photo->save();

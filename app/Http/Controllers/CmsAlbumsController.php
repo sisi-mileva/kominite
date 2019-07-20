@@ -35,7 +35,7 @@ class CmsAlbumsController extends Controller
     // Create album
     $album = new Album;
     $album->name = $request->input('name');
-    $album->description = $request->input('description');
+    $album->description = ! empty($request->input('description')) ? $request->input('description') : '';
     $album->cover_image = '';
 
     $album->save();

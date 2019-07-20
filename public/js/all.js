@@ -42,3 +42,8 @@ kominite.slider = (function(){
 $(function() {
   kominite.slider.initSlider('.products-slider');
 });
+$(function() {
+  $('.menu').on('click', function() {
+    $('nav').toggleClass('active');
+  });
+});

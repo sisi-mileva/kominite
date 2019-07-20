@@ -8,6 +8,18 @@
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
 .border-right {
   border-right: 1px solid black;
 }
@@ -40,6 +52,10 @@
   background-color: $light-cream;
 }
 
+.bg-dark-cream {
+  background-color: $dark-cream;
+}
+
 .bg-gray {
   background-color: $gray;
 }
@@ -48,6 +64,23 @@
   background-color: $light-gray;
 }
 
+.bg-dark-gray {
+  background-color: $dark-gray;
+}
+
 .bg-red {
   background-color: $brick;
+}
+
+.bg-mustard {
+  background-color: $mustard;
+}
+
+.info-container {
+  padding: 20px;
+  font-size: 15px;
+}
+
+.d-inline-block {
+  display: inline-block;
 }

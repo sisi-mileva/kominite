@@ -198,7 +198,8 @@
 
 .image-wrapper {
   width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
+  border-bottom: 2px dashed #e5e5e5;
 
   .image-box {
     width: 200px;

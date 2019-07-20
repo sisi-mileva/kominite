@@ -11,5 +11,14 @@
         <li>
             <a href="{{ url('/admin/gallery') }}">Монтажи</a>
         </li>
+        <li>
+            <a href="{{ url('/admin/blog') }}">Съвети</a>
+        </li>
+        <li>
+            <a href="{{ url('/admin/about-us') }}">За нас</a>
+        </li>
+        <li>
+            <a href="{{ url('/admin/contacts') }}">Контакти</a>
+        </li>
     </ul>
 </nav>

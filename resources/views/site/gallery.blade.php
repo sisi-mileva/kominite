@@ -1,7 +1,7 @@
 @extends('site.index')
 
 @section('content')
-    <div class="products-container clearfix">
+    <div class="products-container gallery-wrapper clearfix">
         @foreach($albums as $album)
             <div class="album-cart">
                 <a href="{{ url('/gallery/' . $album->id) }}" class="album-link">

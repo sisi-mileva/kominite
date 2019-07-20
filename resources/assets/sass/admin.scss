@@ -14,7 +14,14 @@
   bottom: 0;
   left: 0;
   width: 200px;
+  font-size: 15px;
   border: 1px solid gainsboro;
+
+  ul a {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+  }
 }
 
 li {
@@ -23,6 +30,14 @@ li {
 
 .cms-container {
   margin-left: 200px;
+
+  .thumbnail {
+    height: 245px;
+
+    img {
+      height: 100%;
+    }
+  }
 }
 
 .edit-product {

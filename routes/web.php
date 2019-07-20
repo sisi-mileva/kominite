@@ -15,6 +15,8 @@ Route::get('/', 'WebSiteController@getProducts');
 Route::get('/product-group/{id}', 'WebSiteController@getProductGroup');
 Route::get('/gallery', 'GalleryController@index');
 Route::get('/gallery/{id}', 'GalleryController@show');
+Route::get('/about-us', 'WebSiteController@getAboutUs');
+Route::get('/contacts', 'WebSiteController@getContacts');
 
 Route::get('/admin', 'AdminPanelController@index');
 Route::get('/admin/cms', 'AdminPanelController@successLogin');
@@ -44,3 +46,14 @@ Route::get('/admin/gallery/destroy/{id}', 'CmsAlbumsController@destroy');
 Route::get('/admin/photos/create/{id}', 'CmsPhotosController@create');
 Route::post('/admin/photos/store', 'CmsPhotosController@store');
 Route::get('/admin/photos/destroy/{id}', 'CmsPhotosController@destroy');
+
+Route::get('/admin/about-us', 'GeneralInfoController@about');
+Route::get('/admin/contacts', 'GeneralInfoController@contacts');
+Route::post('/admin/general-info/update', 'GeneralInfoController@update');
+
+Route::get('/admin/blog', 'CmsBlogController@index');
+Route::get('/admin/advice', 'CmsBlogController@create');
+Route::post('/admin/advice/store', 'CmsBlogController@store');
+Route::get('/admin/advice/{id}', 'CmsBlogController@show');
+Route::post('/admin/advice/update', 'CmsBlogController@update');
+Route::get('/admin/advice/destroy/{id}', 'CmsBlogController@destroy');
